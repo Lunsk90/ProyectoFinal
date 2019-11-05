@@ -293,7 +293,7 @@ public class MantenimientoMySQL1 {
                                 String precio = jsonArray.getJSONObject(0).getString("precio");
 
 
-                                Intent intent = new Intent(context, MainActivity.class);
+                                Intent intent = new Intent(context, Main2Activity.class);
                                 intent.putExtra("senal", "1");
                                 intent.putExtra("codigo", codigo.toString());
                                 intent.putExtra("descripcion", descripcion);

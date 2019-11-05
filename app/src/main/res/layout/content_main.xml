@@ -4,22 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#E8EFF8"
     tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="serif-monospace"
-        android:text="CRUD MYSQL\nJAVA-ANDROID"
+        android:text="Datos del producto"
+        android:textStyle="bold"
+        android:textSize="25dp"
         android:textAlignment="center"
-        android:textColor="#00BCD4"
-        android:textSize="26dp"
-        android:textStyle="bold" />
+        android:layout_marginTop="20dp" />
+
+
+    <ImageView
+        android:layout_width="334dp"
+        android:layout_height="134dp"
+        android:src="@drawable/my" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,154 +33,148 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/mysql2"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                />
 
             <EditText
                 android:id="@+id/et_codigo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese el código"
-                android:textAlignment="center"
-                android:inputType="number"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/text"
-                android:shadowRadius="5"
-                android:paddingLeft="25dp"
-                android:drawableStart="@drawable/ic_hola"
-                android:drawablePadding="5dp"
-                android:layout_marginRight="45dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="20dp"
-                />
+                android:drawableStart="@drawable/ic_input1"
+                android:drawablePadding="10dp"
+                android:hint="Ingrese el codigo del articulo"
+                android:inputType="number"
+                android:paddingLeft="20dp" />
+
 
             <EditText
                 android:id="@+id/et_descripcion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese la descripción del artículo"
-                android:layout_marginRight="45dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/text"
-                android:paddingLeft="25dp"
-                android:drawableStart="@drawable/ic_descripcion"
-                android:drawablePadding="5dp"
-                />
+                android:drawableStart="@drawable/ic_input2"
+                android:drawablePadding="10dp"
+                android:hint="Ingreser la descripción del artículo"
+                android:paddingLeft="20dp" />
+
 
             <EditText
                 android:id="@+id/et_precio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese el precio del artículo"
-                android:layout_marginRight="45dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="20dp"
-                android:inputType="numberDecimal"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/text"
-                android:paddingLeft="25dp"
                 android:drawableStart="@drawable/ic_precio"
                 android:drawablePadding="5dp"
-                />
+                android:hint="Ingreser el precio del producto"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:paddingRight="100dp" />
 
+            <TextView
+                android:id="@+id/tv_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Resultado"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="15dp" />
 
             <Button
-                android:id="@+id/btn_guardar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_marginTop="30dp"
+                android:id="@+id/btnguardar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/ic_guardar"
+                android:onClick="guardar"
+                android:paddingRight="75dp"
+                android:paddingLeft="95dp"
                 android:text="Guardar"
-                android:textColor="#0A0A0A"
-                android:background="@drawable/button"
-                android:shadowColor="#2314A8"
-                android:shadowDx="-3"
-                android:layout_gravity="center"
-                android:shadowDy="0"
-                android:shadowRadius="8"
-                android:drawableRight="@drawable/ic_save"
-                android:paddingRight="100dp"
-                android:drawablePadding="-140dp"
-                />
+                android:textSize="15dp"
+                tools:ignore="OnClick" />
 
             <Button
-                android:id="@+id/btn_consultaCodigo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnconsultar1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
-                android:text="Consultar \npor código"
-                android:textColor="#0E0D0D"
-                android:layout_gravity="center"
                 android:background="@drawable/button"
-                android:shadowColor="#2314A8"
-                android:shadowDx="-3"
-                android:shadowDy="0"
-                android:shadowRadius="8"
-                android:drawableRight="@drawable/ic_search"
-                android:paddingRight="100dp"
-                android:drawablePadding="-140dp"
-                />
+                android:drawableRight="@drawable/ic_buscar"
+                android:onClick="consultarporcodigo"
+                android:paddingRight="75dp"
+                android:paddingLeft="15dp"
+                android:text="Consulta por código"
+                android:textSize="15dp"
+                tools:ignore="OnClick" />
 
             <Button
-                android:id="@+id/btn_consultaDescripcion"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnconsultar2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
-                android:text="Consultar por\n descrición"
-                android:textColor="#0A0A0A"
                 android:background="@drawable/button"
-                android:shadowColor="#2314A8"
-                android:shadowDx="-3"
-                android:shadowDy="0"
-                android:shadowRadius="8"
-                />
+                android:drawableRight="@drawable/ic_descri"
+                android:onClick="consultarpordescripcion"
+                android:paddingRight="75dp"
+                android:paddingLeft="15dp"
+                android:text="Consulta por descripción"
+                android:textSize="15dp"
+                tools:ignore="OnClick" />
 
             <Button
-                android:id="@+id/btn_eliminar"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
+                android:id="@+id/btneliminar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
-                android:text="Borrar"
-                android:textColor="#070707"
                 android:background="@drawable/button"
-                android:shadowColor="#2314A8"
-                android:shadowDx="-3"
-                android:shadowDy="0"
-                android:shadowRadius="8"
-                />
+                android:drawableRight="@drawable/ic_borrar"
+                android:onClick="bajaporcodigo"
+                android:paddingRight="75dp"
+                android:paddingLeft="110dp"
+                android:text="Eliminar "
+                android:textSize="15dp"
+                tools:ignore="OnClick" />
 
             <Button
-                android:id="@+id/btn_actualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btneditar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/button"
+                android:onClick="modificacion"
+                android:paddingRight="5dp"
                 android:text="Editar"
-                android:layout_gravity="center"
-                android:textColor="#070707"
-                android:background="@drawable/button"
-                android:shadowColor="#2314A8"
-                android:shadowDx="-3"
-                android:shadowDy="0"
-                android:shadowRadius="8"
-                android:layout_marginBottom="20dp"
-                />
+                android:textSize="15dp"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
