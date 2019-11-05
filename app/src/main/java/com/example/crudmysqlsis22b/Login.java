@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
                 String  usu = edtus.getText().toString();
                 String pas = edtpas.getText().toString();
                 if (usu.equals("alcides.lunsk@gmail.com")&& pas.equals("123")) {
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login.this, Main2Activity.class);
                     startActivity(intent);
                     Toast.makeText(Login.this, "Datos Corectos", Toast.LENGTH_LONG).show();
                     edtus.setText("");
