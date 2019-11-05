@@ -166,8 +166,7 @@
                 android:onClick="modificacion"
                 android:paddingRight="5dp"
                 android:text="Editar"
-                android:textSize="15dp"
-                tools:ignore="OnClick" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/textView"
