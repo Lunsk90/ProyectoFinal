@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 
-public class Acercade{
+public class Acercade extends AppCompatActivity {
 
     Dialog myDialog;
     AlertDialog.Builder dialogo;
@@ -22,7 +22,7 @@ public class Acercade{
 
     public void acercade(final Context context){
         myDialog = new Dialog(context);
-        myDialog.setContentView(R.layout.activity_acercade);
+        myDialog.setContentView(R.layout.activity_acercade2);
         myDialog.setTitle("acercade");
         myDialog.setCancelable(true);
 
@@ -39,7 +39,7 @@ public class Acercade{
             }
         });
 */
-       myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.DKGRAY));
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.DKGRAY));
         myDialog.show();
     }
 }

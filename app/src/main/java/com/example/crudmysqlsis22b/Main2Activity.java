@@ -31,6 +31,7 @@ public class Main2Activity extends AppCompatActivity{
     boolean inputEd=false;
     boolean input1=false;
     int resultadoInsert=0;
+    Acercade about = new Acercade();
 
     String senal = "";
     String codigo = "";
@@ -331,7 +332,9 @@ public class Main2Activity extends AppCompatActivity{
         }else if(id == R.id.action_salir){
             DialogConfirmacion();
             return true;
-        }
+        }else if (id==R.id.acercade){
+        about.acercade(Main2Activity.this);
+    }
 
         return super.onOptionsItemSelected(item);
     }
