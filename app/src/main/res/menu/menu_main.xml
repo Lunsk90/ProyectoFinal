@@ -21,13 +21,18 @@
         android:orderInCategory="3"
         android:title="@string/salir"
         app:showAsAction="never" />
-
-
     <item
+        android:id="@+id/acercade"
+        android:orderInCategory="100"
+        android:title="Acerca de"
+        app:showAsAction="never" />
+
+
+    <!--<item
         android:id="@+id/action_listaArticulos1"
         android:icon="@drawable/ic_view"
         android:orderInCategory="3"
         android:title="@string/listarticulos1"
-        app:showAsAction="always" />
+        app:showAsAction="always" />-->
 
 </menu>
